@@ -13,11 +13,17 @@ public class GuiHeadMixin {
     @Inject(method = "drawTexturedModalRect", at = @At("HEAD"), cancellable = true)
     void drawTexturedModalRect(int par1, int par2, int par3, int par4, int par5, int par6, CallbackInfo info) {
         // Code to be injected at the beginning of drawTexturedModalRect
+
+        //GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glEnable(GL11.GL_BLEND);
-        GL11.glDisable(GL11.GL_DEPTH_TEST);
-        GL11.glDepthMask(false);
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        GL11.glDisable(GL11.GL_ALPHA_TEST);
+
+        //GL11.glDisable(GL11.GL_LIGHTING); //Breaks all rendering!
+        //GL11.glDisable(GL11.GL_DEPTH_TEST);
+        //GL11.glEnable(GL11.GL_ALPHA_TEST); //Breaks text rendering
+
+        //GL11.glDepthMask(false);
+
+        //GL11.glColorMask(true, true, true, true);
     }
 }
