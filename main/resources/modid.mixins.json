@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fabricmc.translucency.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "FontRendererMixin",
+    "GuiHeadMixin",
+    "GuiReturnMixin",
+    "GuiScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

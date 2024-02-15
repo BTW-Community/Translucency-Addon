@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "translucency",
+  "version": "${version}",
+
+  "name": "Translucency",
+  "description": "Makes the gui translucent",
+  "authors": [
+    "Polar Onyx"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Polar-Onyx/Translucency-Addon",
+    "sources": "https://github.com/Polar-Onyx/Translucency-Addon"
+  },
+
+  "license": "MIT",
+  "icon": "translucency/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "init": [
+      "net.fabricmc.translucency.TranslucencyMod"
+    ],
+    "preLaunch": [
+      "net.fabricmc.translucency.TranslucencyPreLaunchInitializer"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4"
+  },
+  "suggests": {
+
+  }
+}
