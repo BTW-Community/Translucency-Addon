@@ -4,7 +4,8 @@ An addon for BTWCE 2.1.4 but will be updated for 3.0 as soon as the dev envirome
 ## Features:
 - Allows the gui to be translucent (instead of only opaque)
 - Removes the black overlay from menu backgrounds
-- Makes all menu text white (may be configurable in the future)
+- Makes all menu text white when using a texture pack
+- TODO: Hide crosshair when a menu is open
 
 ## Installation
 Simply [Download](https://github.com/BTW-Community/Translucency-Addon/releases/) the latest Translucency.jar and place it in ``.minecraft\mods`` or drag and drop via multimc/prism ``Edit instance > loader mods``
