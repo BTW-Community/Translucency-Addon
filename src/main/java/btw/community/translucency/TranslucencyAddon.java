@@ -7,7 +7,7 @@ public class TranslucencyAddon extends BTWAddon {
     private static TranslucencyAddon instance;
 
     private TranslucencyAddon() {
-        super("Translucency", "1.0.0", "");
+        super("Translucency", "1.0.1", "");
     }
 
     @Override
