@@ -10,7 +10,11 @@ public class FontRendererMixin {
 
     @ModifyArg(method = "drawString(Ljava/lang/String;III)I", at = @At(value = "INVOKE", target = "Lnet/minecraft/src/FontRenderer;drawString(Ljava/lang/String;IIIZ)I"), index = 3)
     private int modifyColorArgument(int originalColor) {
-        // Modify the color argument to 0xFFFFFFFF
-        return 0xFFFFFFFF;
+        if (!TexturePackAPI.isDefaultTexturePack()) {
+            // Modify the color argument to 0xFFFFFFFF
+            return 0xFFFFFFFF;
+        } else {
+            return originalColor;
+        }
     }
 }
